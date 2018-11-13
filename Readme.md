@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Анатолий Ласточкин](https://up.htmlacademy.ru/htmlcss/23/user/198238).
-* Наставник: `Неизвестно`.
+* Наставник: [Владислав Балабанович](https://htmlacademy.ru/profile/balabanovich).
 
 ---
 
