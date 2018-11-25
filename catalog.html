@@ -16,10 +16,14 @@
         <li><a href="delivery-payment.html">Доставка и оплата</a></li>
         <li><a href="about.html">О Компании</a></li>
       </ul>
+      <div class="search">
+        <form action="#" method="post">
+          <input type="search" name="sercher" placeholder="Что ищем?">
+        </form>
+      </div>
       <ul class="user-navigation">
-        <li class="search-link"></li>
-        <li class="login-link">Вход</li>
-        <li class="basket-link">2 товара</li>
+        <li class="login-link"><a href="login.html">Вход</a></li>
+        <li class="cart-link"><a href="cart.html">2 товара</a></li>
       </ul>
     </nav>
     <div class="hours-phone">
@@ -156,6 +160,29 @@
       <span>Сделано в<a class="btn" href="https://htmlacademy.ru">HTML Academy</a>2017</span>   
     </div>
   </footer>
+
+  <section class="cart">
+    <h2 class="visually-hidden">Корзина</h2>
+    <ul>
+      <li>
+        <button class="remove-good" type="button">Удалить товар</button>  
+        <img src="img/ice-cream-1.jpg" width="33" height="33" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+        <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+        <span class="quantity-per-price">1.5кг * 200 руб.</span>
+        <span class="price">300 руб.</span>
+      </li>
+      <li>
+          <button class="remove-good" type="button">Удалить товар</button>  
+          <img src="img/ice-cream-2.jpg" width="33" height="33" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+          <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
+          <span class="quantity-per-price">1.5кг * 300 руб.</span>
+          <span class="price">450 руб.</span>
+        </li>
+    </ul>
+    <hr>
+    <b class="total">Итого: 750 руб.</b>
+    <button class="order-goods" type="button">Оформить заказ</button>  
+  </section>
 
  </body>
 </html>
