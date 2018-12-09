@@ -9,7 +9,7 @@
 </head>
 <body>
   <header class="main-header">
-    <nav class="main-navigation">
+    <nav class="main-navigation container">
       <a class="main-logo">
         <img src="img/logo.svg" width="154" height="64" alt="Логотип «Gllacy Shop»">   
       </a>
@@ -40,7 +40,6 @@
           <a class="btn-login" href="login.html">Вход</a>
           <section class="login-form-wrapper">
             <h2 class="visually-hidden">Личный кабинет</h2>
-            <p>Введите пожалуйста свой логин и пароль.</p>
             <form class="login-form" action="/" method="post">
               <p class="login-form-item">
                 <label class="visually-hidden" for="user-login">Электронная почта</label>
@@ -53,7 +52,7 @@
               <p class="login-password-info">
                 <a class="restore" href="#">Я забыли пароль?</a>
               </p>
-              <p>
+              <p class="create-account-info">
                 <a class="create-account" href="#">Новая регистрация</a>
               </p>
               <button class="btn btn-submit" type="submit">Войти</button>
@@ -68,7 +67,7 @@
         </li>
       </ul>
     </nav>
-    <div class="hours-phone">
+    <div class="hours-phone container">
       <span>С 10 до 20, ежедневно</span>
       <b>8 812 450-25-25</b>
     </div>
@@ -144,23 +143,23 @@
       <h2>Магазин Глэйси — это онлайн- и офлайн-магазин по продажемороженого собственного производства на развес</h2>
       <ul class="features-list">
         <li class="features-item">
-          <p class="feature-icon-1">Все наше мороженое изготавливается на собственном производстве, 
+          <p class="feature-icon-icecream">Все наше мороженое изготавливается на собственном производстве, 
           с использованием современного оборудования и проверенных временем технологий.</p>
-          <p class="feature-icon-2">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества.
+          <p class="feature-icon-leaf">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества.
           Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
         </li>
         <li class="features-item">
-          <p class="feature-icon-3">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний,
+          <p class="feature-icon-cow">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний,
           с которыми нас связывает долговременное сотрудничество.</p>
-          <p class="feature-icon-4">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке,
+          <p class="feature-icon-thermometer">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке,
           который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
         </li>
       </ul>
     </section>
-    <div>
+    <div class="blog-wrapper">
       <section class="blog">
         <h3>Новое в нашем блоге</h3>
-        <a class="blog-item" href="#">10 способов сервировкифруктовых щербетов к столу</a>
+        <a class="blog-item" href="#">10 способов сервировки фруктовых щербетов к столу</a>
       </section>
       <section class="appointment">
         <div class="appointment-wrapp">
@@ -170,7 +169,7 @@
           <form class="subscribe-form"  action="/" method="post">
             <label class="visually-hidden" for="email">Электронная почта</label>
             <input id="email" type="text" name="email" placeholder="Электронная почта">
-            <button class="btn btn-send" type="submit">Отправить</button>
+            <button class="btn btn-send-subscribe" type="submit">Отправить</button>
            </form>
         </div>
       </section>
@@ -192,29 +191,29 @@
     </section>
   </main>
 
-  <footer class="main-footer">
+  <footer class="main-footer container">
     <div class="footer-social">
-      <ul>
-        <li><a class="social-btn social-btn-tv" href="https://twitter.com">Твитер</a></li>
-        <li><a class="social-btn social-btn-in" href="https://www.instagram.com">Инстаграм</a></li>  
-        <li><a class="social-btn social-btn-fb" href="https://www.facebook.com">Фейсбук</a></li>
-        <li><a class="social-btn social-btn-vk" href="https://vk.com">Вконтакте</a></li>
+      <ul class="social-links">
+        <li><a class="social-btn social-btn-tv" href="https://twitter.com">Твр</a></li>
+        <li><a class="social-btn social-btn-in" href="https://www.instagram.com">Инст</a></li>  
+        <li><a class="social-btn social-btn-fb" href="https://www.facebook.com">Фб</a></li>
+        <li><a class="social-btn social-btn-vk" href="https://vk.com">Вк</a></li>
       </ul>
     </div>
-    <div class="documents-info">
-      <ul>
-        <li class="item-info">
+    <div class="documents">
+      <ul class="documents-info">
+        <li class="item-info suppliers">
           <span class="heart-icon">Сердце</span>
           <a href="#">Для поставщиков</a>
         </li>
-        <li class="item-info"><a href="#">О производстве</a></li>
-        <li class="item-info"><a href="#">Наши документы</a></li>
-        <li class="item-info"><a href="#">Экологические стандарты</a></li>
+        <li class="item-info our-documents"><a href="#">Наши документы</a></li>
+        <li class="item-info manufacture"><a href="#">О производстве</a></li>
+        <li class="item-info eco"><a href="#">Экологические стандарты</a></li>
       </ul>
     </div>
     <div class="footer-copyright">
-      <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип «HTML Academy»">
-      <span>Сделано в<a class="btn-copyright" href="https://htmlacademy.ru">HTML Academy</a>2017</span>   
+      <img class="htmlacademy-logo" src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип «HTML Academy»">
+      <span>Сделано в <a class="btn-copyright" href="https://htmlacademy.ru">HTML Academy</a> 2017</span>   
     </div>
   </footer>
   <section class="feedback">
