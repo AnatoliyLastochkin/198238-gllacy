@@ -104,26 +104,21 @@
       <li class="breadcrumbs-current"><a>Сливочноe</a></li>
     </ul>
     <h1 class="page-title">Сливочное мороженое</h1>
-    <form method="get" action="/">
+    <form class="filter-form" method="get" action="/">
       <fieldset class="filter-item">
         <legend>Сортировка:</legend>
         <div class="sorter-filter">
           <select name="sorter">
-            <option selected value="По популярности">По популярности</option>
-            <option value="Сначала недорогие">Сначала недорогие</option>
-            <option value="Сначала дорогие">Сначала дорогие</option>
-            <option value="По жирности">По жирности</option>
+            <option selected value="popular">По популярности</option>
+            <option value="cheap">Сначала недорогие</option>
+            <option value="expensive">Сначала дорогие</option>
+            <option value="fatness">По жирности</option>
           </select>
         </div>
       </fieldset>
-
       <fieldset class="filter-item">
-        <legend class="visually-hidden">Цена:</legend>
+        <legend>Цена: 100 руб. – 500 руб.</legend>
         <div class="range-filter">
-          <div class="price-controls">
-            <label class="min-price">Цена:<input name="min-price" type="text" value="100">руб.</label>
-            <label class="max-price">-<input name="max-price" type="text" value="500">руб.</label>
-          </div>
           <div class="range-controls">
             <div class="scale">
                 <div class="bar"></div>
@@ -132,8 +127,36 @@
             <div class="toggle toggle-max"></div>
           </div>
         </div>
-
       </fieldset>
+      <fieldset class="filter-item">
+        <legend>Жирность:</legend>
+        <div class="fatnesses-wrapper">
+          <input name="fatness" type="radio" value="0" id="zero">
+          <label for="zero">0%</label>
+          <input name="fatness" type="radio" value="10" id="ten" checked>
+          <label for="ten">до 10%</label>
+          <input name="fatness" type="radio" value="30" id="thirty">
+          <label for="thirty">до 30%</label>
+          <input name="fatness" type="radio" value="more 30" id="more-thirty">
+          <label for="more-thirty">выше 30%</label>
+        </div>
+      </fieldset>
+      <fieldset class="filter-item">
+        <legend>Наполнители:</legend>
+        <div class="filler-wrapper">
+          <input type="checkbox" value="шоколадные" id="chocolate" checked>
+          <label for="chocolate">шоколадные</label>
+          <input type="checkbox" value="сахарные присыпки" id="sugar" checked>
+          <label for="sugar">сахарные присыпки</label>
+          <input type="checkbox" value="фрукты" id="fruit">
+          <label for="fruit">фрукты</label>
+          <input type="checkbox" value="сиропы" id="syrup">
+          <label for="syrup">сиропы</label>
+          <input type="checkbox" value="джемы" id="jam">
+          <label for="jam">джемы</label>
+        </div>
+      </fieldset>
+      <button class="btn-filter" type="submit" value="Применить">Применить</button>  
     </form>
     <section class="catalog">
       <h2 class="visually-hidden">Список мороженного</h2>
@@ -142,7 +165,7 @@
           <a class="catalog-item-image" href="catalog-item.html">
             <img src="img/product-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
           </a>
-          <b class="catalog-item-price">310 ₽/кг</b>
+          <b class="catalog-item-price">310 ₽<span class="kilo">/кг</span></b>
           <h3><a class="catalog-item-title" href="catalog-item.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
           <a class="btn quick-review" href="#">Быстрый просмотр</a>
         </li>
@@ -150,7 +173,7 @@
           <a class="catalog-item-image" href="catalog-item.html">
             <img src="img/product-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
           </a>
-          <b class="catalog-item-price">380 ₽/кг</b>
+          <b class="catalog-item-price">380 ₽<span class="kilo">/кг</span></b>
           <h3><a class="catalog-item-title" href="catalog-item.html">Сливочно-кофейное с кусочками шоколада</a></h3>
           <a class="btn quick-review" href="#">Быстрый просмотр</a>
         </li>
@@ -158,7 +181,7 @@
           <a class="catalog-item-image" href="catalog-item.html">
             <img src="img/product-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
           </a>
-          <b class="catalog-item-price">355 ₽/кг</b>
+          <b class="catalog-item-price">355 ₽<span class="kilo">/кг</span></b>
           <h3><a class="catalog-item-title" href="catalog-item.html">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
           <a class="btn quick-review" href="#">Быстрый просмотр</a>
         </li>
@@ -166,7 +189,7 @@
           <a class="catalog-item-image" href="catalog-item.html">
             <img src="img/product-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
           </a>
-          <b class="catalog-item-price">415 ₽/кг</b>
+          <b class="catalog-item-price">415 ₽<span class="kilo">/кг</span></b>
           <h3><a class="catalog-item-title" href="catalog-item.html">Сливочное крем-брюле с карамельной подливкой</a></h3>
           <a class="btn quick-review" href="#">Быстрый просмотр</a>
         </li>
@@ -174,7 +197,7 @@
           <a class="catalog-item-image" href="catalog-item.html">
             <img src="img/product-5.jpg" width="267" height="267" alt="Сливочное с брусничным джемом">
           </a>
-          <b class="catalog-item-price">325 ₽/кг</b>
+          <b class="catalog-item-price">325 ₽<span class="kilo">/кг</span></b>
           <h3><a class="catalog-item-title" href="catalog-item.html">Сливочное с брусничным джемом</a></h3>
           <a class="btn quick-review" href="#">Быстрый просмотр</a>
         </li>
@@ -182,7 +205,7 @@
           <a class="catalog-item-image" href="catalog-item.html">
             <img src="img/product-6.jpg" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники">
           </a>
-          <b class="catalog-item-price">410 ₽/кг</b>
+          <b class="catalog-item-price">410 ₽<span class="kilo">/кг</span></b>
           <h3><a class="catalog-item-title" href="catalog-item.html">Сливочно-черничное с цельными ягодами черники</a></h3>
           <a class="btn quick-review" href="#">Быстрый просмотр</a>
         </li>
@@ -190,7 +213,7 @@
           <a class="catalog-item-image" href="catalog-item.html">
             <img src="img/product-7.jpg" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой">
           </a>
-          <b class="catalog-item-price">375 ₽/кг</b>
+          <b class="catalog-item-price">375 ₽<span class="kilo">/кг</span></b>
           <h3><a class="catalog-item-title" href="catalog-item.html">Сливочно-лимонное с карамельной присыпкой</a></h3>
           <a class="btn quick-review" href="#">Быстрый просмотр</a>
         </li>
@@ -198,7 +221,7 @@
           <a class="catalog-item-image" href="catalog-item.html">
             <img src="img/product-8.jpg" width="267" height="267" alt="Сливочное с шоколадной стружкой">
           </a>
-          <b class="catalog-item-price">320 ₽/кг</b>
+          <b class="catalog-item-price">320 ₽<span class="kilo">/кг</span></b>
           <h3><a class="catalog-item-title" href="catalog-item.html">Сливочное с шоколадной стружкой</a></h3>
           <a class="btn quick-review" href="#">Быстрый просмотр</a>
         </li>
@@ -206,7 +229,7 @@
           <a class="catalog-item-image" href="catalog-item.html">
             <img src="img/product-9.jpg" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
           </a>
-          <b class="catalog-item-price">440 ₽/кг</b>
+          <b class="catalog-item-price">440 ₽<span class="kilo">/кг</span></b>
           <h3><a class="catalog-item-title" href="catalog-item.html">Сливочно-ванильное с кусочками шоколада</a></h3>
           <a class="btn quick-review" href="#">Быстрый просмотр</a>
         </li>
@@ -214,7 +237,7 @@
           <a class="catalog-item-image" href="catalog-item.html">
             <img src="img/product-10.jpg" width="267" height="267" alt="Сливочноe с ментоловым сиропом">
           </a>
-          <b class="catalog-item-price">435 ₽/кг</b>
+          <b class="catalog-item-price">435 ₽<span class="kilo">/кг</span></b>
           <h3><a class="catalog-item-title" href="catalog-item.html">Сливочноe с ментоловым сиропом</a></h3>
           <a class="btn quick-review" href="#">Быстрый просмотр</a>
         </li>
@@ -222,7 +245,7 @@
           <a class="catalog-item-image" href="catalog-item.html">
             <img src="img/product-11.jpg" width="267" height="267" alt="Сливочное с кусочками черного шоколада">
           </a>
-          <b class="catalog-item-price">355 ₽/кг</b>
+          <b class="catalog-item-price">355 ₽<span class="kilo">/кг</span></b>
           <h3><a class="catalog-item-title" href="catalog-item.html">Сливочное с кусочками черного шоколада</a></h3>
           <a class="btn quick-review" href="#">Быстрый просмотр</a>
         </li>
@@ -230,17 +253,19 @@
           <a class="catalog-item-image" href="catalog-item.html">
             <img src="img/product-12.jpg" width="267" height="267" alt="Сливочное с мятным сиропом">
           </a>
-          <b class="catalog-item-price">420 ₽/кг</b>
+          <b class="catalog-item-price">420 ₽<span class="kilo">/кг</span></b>
           <h3><a class="catalog-item-title" href="catalog-item.html">Сливочное с мятным сиропом</a></h3>
           <a class="btn quick-review" href="#">Быстрый просмотр</a>
         </li>
       </ul>
       <ul class="pagination-list">
-        <li class="pagination-item pagination-item-current"><a>1</a></li>
+        <li class="left-icon">‹</li>
+        <li class="pagination-item pagination-item-current">1</li>
         <li class="pagination-item"><a href="#">2</a></li>
         <li class="pagination-item"><a href="#">3</a></li>
         <li class="pagination-item"><a href="#">4</a></li>
         <li class="pagination-item"><a href="#">5</a></li>
+        <li class="right-icon">›</li>
       </ul>
     </section>
   </main>
