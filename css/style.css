@@ -98,10 +98,15 @@ a {
   height: 64px;
 }
 
+.inner-page .main-header {
+  margin-top: 9px;
+}
+
 .main-navigation {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-top: 9px;
 
   font-size: 16px;
   line-height: 18px;
@@ -116,6 +121,7 @@ a {
 }
 
 .main-logo {
+ 
   width: 154px;
   height: 64px;
 }
@@ -132,6 +138,7 @@ a {
   position: relative;
   display: inline-block;
   margin-left: 24px;
+  height: 30px;
 }
 
 .site-navigation > li:nth-child(2) {
@@ -171,7 +178,7 @@ a {
 .site-navigation .sub-menu {
   display: none;
   position: absolute;
-  top: 30px;
+  top: 29px;
   left: -15px;
   
   width: 143px;
@@ -284,7 +291,7 @@ a {
 .search-wrapper:hover .search-icon::after {
   position: absolute;
   content: "";
-  top: 8px;
+  top: 6px;
   left: 8px;
 
   width: 17px;
@@ -670,7 +677,7 @@ a {
 .slider {
   position: relative;
   
-  margin-top: 320px;
+  margin-top: 329px;
   padding-bottom: 41px;
   
   text-align: center;
