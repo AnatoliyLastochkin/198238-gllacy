@@ -24,7 +24,7 @@
                 <a href="#">Каталог</a>
                 <ul class="sub-menu">
                   <li><a href="#">Новинки</a></li>
-                  <li><a href="creamy.html">Сливочное</a></li>
+                  <li><a href="catalog-item.html">Сливочное</a></li>
                   <li><a href="#">Щербеты</a></li>
                   <li><a href="#">Фруктовый лед</a></li>
                   <li><a href="#">Мелорин</a></li>
@@ -35,7 +35,7 @@
             </ul>
           </div> 
           <div class="user-navigation-wrapper">
-            <div class="search-wrapper">
+            <div class="search-wrapper" tabindex="0">
               <span class="search-icon"></span>
               <div class="search-form">
                 <form action="/" method="post">
@@ -126,37 +126,45 @@
       <section class="hits">
         <h2 class="visually-hidden">Список мороженного</h2>
         <ul class="catalog-list">
-          <li class="catalog-item catalog-item-hit">
-            <a class="catalog-item-image" href="catalog-item.html">
-              <img src="img/product-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-            </a>
-            <b class="catalog-item-price">310 ₽<span class="kilo">/кг</span></b>
-            <a class="catalog-item-title" href="catalog-item.html"><h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3></a>
-            <a class="btn quick-review" href="#">Быстрый просмотр</a>
+          <li class="catalog-item">
+            <div class="catalog-item-wrapper">
+              <a class="catalog-item-image" href="catalog-item.html">
+                <img src="img/product-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+              </a>
+              <b class="catalog-item-price">310 ₽<span class="kilo">/кг</span></b>
+              <h3><a class="catalog-item-title" href="catalog-item.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
+              <a class="btn quick-review" href="#">Быстрый просмотр</a>
+            </div>
           </li>
           <li class="catalog-item catalog-item-hit">
-            <a class="catalog-item-image" href="catalog-item.html">
-              <img src="img/product-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
-            </a>
-            <b class="catalog-item-price">380 ₽<span class="kilo">/кг</span></b>
-            <h3><a class="catalog-item-title" href="catalog-item.html">Сливочно-кофейное с кусочками шоколада</a></h3>
-            <a class="btn quick-review" href="#">Быстрый просмотр</a>
+            <div class="catalog-item-wrapper">
+              <a class="catalog-item-image" href="catalog-item.html">
+                <img src="img/product-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+              </a>
+              <b class="catalog-item-price">380 ₽<span class="kilo">/кг</span></b>
+              <h3><a class="catalog-item-title" href="catalog-item.html">Сливочно-кофейное с кусочками шоколада</a></h3>
+              <a class="btn quick-review" href="#">Быстрый просмотр</a>
+            </div>
           </li>
           <li class="catalog-item catalog-item-hit">
-            <a class="catalog-item-image" href="catalog-item.html">
-              <img src="img/product-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-            </a>
-            <b class="catalog-item-price">355 ₽<span class="kilo">/кг</span></b>
-            <h3><a class="catalog-item-title" href="catalog-item.html">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
-            <a class="btn quick-review" href="#">Быстрый просмотр</a>
+            <div class="catalog-item-wrapper">
+              <a class="catalog-item-image" href="catalog-item.html">
+                <img src="img/product-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+              </a>
+              <b class="catalog-item-price">355 ₽<span class="kilo">/кг</span></b>
+              <h3><a class="catalog-item-title" href="catalog-item.html">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
+              <a class="btn quick-review" href="#">Быстрый просмотр</a>
+            </div>
           </li>
           <li class="catalog-item catalog-item-hit">
-            <a class="catalog-item-image" href="catalog-item.html">
-              <img src="img/product-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
-            </a>
-            <b class="catalog-item-price">415 ₽<span class="kilo">/кг</span></b>
-            <h3><a class="catalog-item-title" href="catalog-item.html">Сливочное крем-брюле с карамельной подливкой</a></h3>
-            <a class="btn quick-review" href="#">Быстрый просмотр</a>
+            <div class="catalog-item-wrapper">
+              <a class="catalog-item-image" href="catalog-item.html">
+                <img src="img/product-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+              </a>
+              <b class="catalog-item-price">415 ₽<span class="kilo">/кг</span></b>
+              <h3><a class="catalog-item-title" href="catalog-item.html">Сливочное крем-брюле с карамельной подливкой</a></h3>
+              <a class="btn quick-review" href="#">Быстрый просмотр</a>
+            </div>
           </li>
         </ul>
       </section>
@@ -203,13 +211,17 @@
         </p>
         <div class="contacts">
           <h2 class="visually-hidden">Контакты</h2>
-          <p class="contacts-address">Адрес главного офиса<br> и офлайн-магазина:<br>
-            <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
+          <p class="contacts-address">
+            Адрес главного офиса<br> и офлайн-магазина:<br>
+            <span class="contact-bold-text">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
           </p>
-          <p class="contacts-phone">Для заказов по телефону:<br>
-            <b>8 812 450-25-25</b><br>(с 10 до 20 ежедневно)
+          <p class="contacts-phone">
+            Для заказов по телефону:<br>
+              <span class="contact-bold-text">8 812 450-25-25</span><br>(с 10 до 20 ежедневно)
           </p>
-          <a class="btn btn-feedback-form" href="feedback-form.html">Форма обратной связи</a><br>
+          <div class="map-button-wrapper">
+            <a class="btn btn-feedback-form" href="feedback-form.html">Форма обратной связи</a>
+          </div>
         </div>
     </section>
     
@@ -235,12 +247,12 @@
       </div>
       <div class="footer-copyright">
         <img class="htmlacademy-logo" src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип «HTML Academy»">
-        <span>Сделано в <a class="link-copyright" href="https://htmlacademy.ru">HTML Academy</a> © 2017</span>   
+        <span>Сделано в <a class="link-copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</span>   
       </div>
     </footer>
   </div>
 
-  <section class="feedback">
+  <section class="modal-feedback">
     <h2>Мы обязательно вам ответим!</h2>
     <button class="close-popup" type="button"></button>
     <form class="feedback-form" action="/" method="post">
@@ -259,5 +271,6 @@
       <button class="btn btn-send" type="submit">Отправить</button>
     </form>
   </section>
+  <script src="js/script.js"></script>
 </body>
 </html>
