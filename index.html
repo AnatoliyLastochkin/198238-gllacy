@@ -35,20 +35,20 @@
             </ul>
           </div> 
           <div class="user-navigation-wrapper">
-            <div class="search-wrapper" tabindex="0">
-              <span class="search-icon"></span>
-              <div class="search-form">
-                <form action="/" method="post">
-                  <input type="search" name="sercher" placeholder="Что ищем?">
-                </form>
-              </div>
-            </div>
             <ul class="user-navigation">
+              <li class="search-link">
+                <a class="search-icon" href="search.html"></a>
+                <div class="search-form-wrapper">
+                  <form action="https://echo.htmlacademy.ru" method="post">
+                    <input type="search" name="sercher" placeholder="Что ищем?">
+                  </form>
+                </div>
+              </li>
               <li class="login-link">
                 <a class="btn-login" href="login.html">Вход</a>
                 <section class="login-form-wrapper">
                   <h2 class="visually-hidden">Личный кабинет</h2>
-                  <form class="login-form" action="/" method="post">
+                  <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
                     <p class="login-form-item">
                       <label class="visually-hidden" for="user-login">Электронная почта</label>
                       <input id="user-login" type="text" name="login" placeholder="Электронная почта">
@@ -195,7 +195,7 @@
             <h3 class="visually-hidden">Подписатся</h3>
             <p class="subscribe">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного,
               что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-            <form class="subscribe-form"  action="/" method="post">
+            <form class="subscribe-form"  action="https://echo.htmlacademy.ru" method="post">
               <label class="visually-hidden" for="subscribe-email">Электронная почта</label>
               <input id="subscribe-email" type="text" name="subscribe-email" placeholder="Электронная почта">
               <button class="btn btn-send-subscribe" type="submit">Отправить</button>
