@@ -5,7 +5,7 @@
     <title>Catalog</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,500i,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/minimize.css">
 </head>
 <body class="inner-page">
   <header class="main-header">
@@ -15,22 +15,22 @@
           <img src="img/logo.svg" width="154" height="64" alt="Логотип «Gllacy Shop»">   
         </a>
         <ul class="site-navigation">
-          <li class="site-navigation-current">
-            <a href="#">Каталог</a>
+          <li class="site-navigation-item">
+            <a class="site-navigation-link site-navigation-current" href="#">Каталог</a>
             <ul class="sub-menu">
               <li><a href="#">Новинки</a></li>
-              <li><a href="#">Сливочное</a></li>
+              <li><a class="sub-menu-link" href="#">Сливочное</a></li>
               <li><a href="#">Щербеты</a></li>
               <li><a href="#">Фруктовый лед</a></li>
               <li><a href="#">Мелорин</a></li>
             </ul> 
           </li>
-          <li><a href="delivery-payment.html">Доставка и оплата</a></li>
-          <li><a href="about.html">О Компании</a></li>
+          <li class="site-navigation-item"><a class="site-navigation-link" href="delivery-payment.html">Доставка и оплата</a></li>
+          <li class="site-navigation-item"><a class="site-navigation-link" href="about.html">О Компании</a></li>
         </ul>
       </div>
       <div class="user-navigation-wrapper">
-        <div class="search-wrapper">
+        <div class="search-wrapper" tabindex="0">
           <span class="search-icon"></span>
           <div class="search-form">
             <form action="/" method="post">
@@ -104,7 +104,7 @@
       <li class="breadcrumbs-current"><a>Сливочноe</a></li>
     </ul>
     <h1 class="page-title">Сливочное мороженое</h1>
-    <form class="filter-form" method="get" action="/">
+    <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
       <fieldset class="filter-item">
         <legend>Сортировка:</legend>
         <div class="sorter-filter">
@@ -292,8 +292,9 @@
     </div>
     <div class="footer-copyright">
       <img class="htmlacademy-logo" src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип «HTML Academy»">
-      <span>Сделано в <a class="btn-copyright" href="https://htmlacademy.ru">HTML Academy</a> © 2017</span>   
+      <span>Сделано в <a class="btn-copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</span>   
     </div>
   </footer>
+  <script src="js/minimize.js"></script>
 </body>
 </html>
