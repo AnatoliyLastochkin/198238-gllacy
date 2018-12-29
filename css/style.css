@@ -126,6 +126,9 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
   padding-top: 9px;
 
   font-size: 16px;
@@ -280,19 +283,31 @@ a {
 }
 
 .user-navigation-wrapper {
+  width: 253px;
+}
+
+.inner-page .user-navigation-wrapper {
+  width: 267px;
+}
+
+.user-navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 270px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.search-wrapper {
+.search-link {
+  position: relative;
+}
+
+.search-link {
+  margin-left: 5px;
+}
+
+.search-icon {
   position: relative;
   width: 33px;
   height: 33px;
@@ -304,14 +319,13 @@ a {
 
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
-}
+} 
 
-.search-wrapper:hover {
+
+
+.search-icon:hover,
+.search-icon:focus {
   background-color: #f8f7f4;
-}
-
-.search-icon {
-  position: relative;
 }
 
 .search-icon::before {
@@ -328,10 +342,11 @@ a {
   background-position: 0 0;
 } 
 
-.search-wrapper:hover .search-icon::after {
+.search-icon:hover::after,
+.search-icon:focus::after  {
   position: absolute;
   content: "";
-  top: 6px;
+  top: 8px;
   left: 8px;
 
   width: 17px;
@@ -342,16 +357,15 @@ a {
   background-position: 0 0;
 } 
 
-.search-wrapper .search-form {
+.search-form-wrapper {
   display: none;
   position: absolute;
   top: 35px;
   right: 0;
   width: 341px;
-
 }
 
-.search-wrapper:hover .search-form {
+.search-link:hover .search-form-wrapper {
   display: block;
 
   background-color: #f8f7f4;
@@ -360,7 +374,7 @@ a {
   border-radius: 5px;
 }
 
-.search-form input[type="search"] {
+.search-form-wrapper input[type="search"] {
   width: 311px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -380,8 +394,8 @@ a {
           box-shadow: none;
 }
 
-.search-form input[type="search"]:hover,
-.search-form input[type="search"]:focus {
+.search-form-wrapper input[type="search"]:hover,
+.search-form-wrapper input[type="search"]:focus {
   padding: 9px 13px;
   border: 2px solid rgba(154, 154, 154, .52);
 }
@@ -389,12 +403,16 @@ a {
 .user-navigation {
   padding: 0;
   margin: 0;
-  margin-left: 9px;
+ 
   
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
   list-style: none;
+}
+
+.inner-page .user-navigation {
+  margin-left: 0;
 }
 
 .user-navigation .btn-login:hover,
@@ -413,7 +431,21 @@ a {
   vertical-align: top;
 }
 
-.btn-login,
+.btn-login {
+  position: relative;
+
+  padding: 8px 16px 8px 45px;
+  margin-bottom: 5px;
+  margin-left: 4px;
+
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+
+  background-color: rgba(255, 255, 255, .2);
+  border-radius: 50px;
+}
+
 .cart-link {
   position: relative;
 
@@ -449,7 +481,8 @@ a {
   background-position: 0 0;
 }
 
-.btn-login:hover::before {
+.btn-login:hover::before,
+.btn-login:focus::before {
   position: absolute;
   content: "";
   top: 4px;
@@ -591,7 +624,6 @@ a {
   top: 35px;
   right: 0;
   width: 540px;
-  
 }
 
 .cart:hover .cart-form-active {
@@ -777,7 +809,7 @@ a {
 .slide-title {
   width: 700px;
   margin: 0 auto;
-  margin-bottom: 27px;
+  margin-bottom: 29px;
   
   font-size: 60px;
   line-height: 60px;
@@ -1248,7 +1280,7 @@ a {
 }
 
 .hits {
-  margin-bottom: 40px;
+  margin-bottom: 38px;
 }
 
 .catalog-list {
@@ -1961,6 +1993,8 @@ a {
   color: #ffbc9e;
   border-bottom: 1px solid rgba(255, 188, 158, 1);
 }
+
+
 
 .footer-copyright {
   display: -webkit-box;
