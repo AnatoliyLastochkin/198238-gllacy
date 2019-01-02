@@ -1374,12 +1374,14 @@ a {
 }
 
 .catalog-item .catalog-item-title {
+  position: relative;
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;
   color: #ffffff;
 
   border-bottom: 1px solid rgba(209, 208, 206, .2);
+  z-index: 1;
 }
 
 .catalog-item:hover .quick-review {
@@ -1431,12 +1433,6 @@ a {
   color: rgba(255,255,255,.2)
 }
 
-.right-icon {
-  margin-left: 0;
-  font-size: 30px;
-  cursor: pointer;
-}
-
 .pagination-item-current {
   border-radius: 50%;
   color: #323232;
@@ -1448,6 +1444,12 @@ a {
   line-height: 18px;
   font-weight: 400;
   color: #ffffff;
+}
+
+.pagination-list .right-icon {
+  margin:  0;
+  font-size: 30px;
+  cursor: pointer;
 }
 
 .pagination-item:hover,
@@ -1472,8 +1474,9 @@ a {
 }
 
 .features h2 {
-  margin: 0;
   padding: 23px 0 0 20px;
+  margin: 0;
+  margin-bottom: 20px;
 
   font-size: 24px;
   line-height: 30px;
@@ -1484,44 +1487,31 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
+          
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   padding: 0;
- 
   margin: 0;
+  width: 1146px;
   
   list-style: none;
 }
 
-.features-item p {
-  position: relative;
-  margin: 0;
-  margin-top: 15px;
-  padding: 0;
-}
-
 .features-item {
-  width: 476px;
-  margin: 0;
-  padding: 5px 15px 26px 76px;
+  position: relative;
+  width: 480px;
+  padding-right: ;
+  margin-left: 75px;
+  margin-bottom: 24px; 
 }
 
-.features-item-right {
-  padding-right: 27px;
-}
-
-
-.features-item .feature-icon-leaf {
-  margin-top: 22px;
-}
-
-.features-item .feature-icon-cow {
-  margin-bottom: 22px;
+.features-item:nth-child(odd) {
+  margin-right: 14px;
 }
 
 .feature-icon-icecream::before {
@@ -1641,6 +1631,7 @@ a {
 }
 
 .appointment {
+  position: relative;
   width: 560px;
 
   color: #323232;
@@ -1654,26 +1645,36 @@ a {
   border-radius: 15px;
 }
 
-.appointment-wrapp {
+.appointment::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  z-index: 1;
+
   font-weight: 400;
 
   width: 549px;
-
+  height: 210px;
   background-color: #f8f7f4;
   border-radius: 10px;
   margin: 4px 5px 5px 6px;
 }
 
 .subscribe {
-  width: 506px;
+  position: relative;
+  width: 515px;
   margin: 0;
   margin-bottom: 34px;
-  padding: 30px 20px 0 21px;
+  padding: 35px 20px 0 26px;
+  z-index: 2;
 }
 
 .subscribe-form {
-  padding-left: 20px;
+  position: relative;
+  padding-left: 25px;
   padding-bottom: 35px;
+  z-index: 2;
 }
 
 .subscribe-form input[type="text"] {
