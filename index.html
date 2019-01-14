@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="utf-8">
-    <title>Gllacy Shop</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,500i,700&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/minimize.css">
+  <meta charset="utf-8">
+  <title>Gllacy Shop</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <input class="visually-hidden-radio" type="radio" id="product-1" name="toggle" checked>
@@ -37,7 +37,7 @@
           <div class="user-navigation-wrapper">
             <ul class="user-navigation">
               <li class="search-link">
-                <a class="search-icon" href="search.html"></a>
+                <a class="search-icon" href="search.html">Поиск</a>
                 <div class="search-form-wrapper">
                   <form action="https://echo.htmlacademy.ru" method="post">
                     <input type="search" name="sercher" placeholder="Что ищем?">
@@ -57,13 +57,15 @@
                       <label class="visually-hidden" for="user-password">Пароль</label>
                       <input id="user-password" type="password" name="password" placeholder="Пароль">
                     </p>
-                    <p class="login-password-info">
-                      <a class="restore" href="#">Я забыли пароль?</a>
-                    </p>
-                    <p class="create-account-info">
-                      <a class="create-account" href="#">Новая регистрация</a>
-                    </p>
-                    <button class="btn btn-submit" type="submit">Войти</button>
+                    <div class="login-items-wrapp">
+                      <p class="login-submit">
+                        <button class="btn btn-submit" type="submit">Войти</button>
+                      </p>
+                      <p class="login-password-info">
+                        <a class="info-item" href="#">Я забыли пароль?</a>
+                        <a class="info-item" href="#">Новая регистрация</a>
+                      </p>
+                    </div>
                   </form>
                 </section>
               </li>
@@ -73,17 +75,20 @@
             </ul>
           </div> 
         </nav>
-        <div class="schedule container">
+        <div class="schedule ">
           <p class="hours">С 10 до 20, ежедневно</p>
-          <p class="phone">8 812 450-25-25</p>
+          <p class="phone">
+            <a class="phone-number"  href="tel:8-812-450-25-25">8 812 450-25-25</a>
+          </p>
         </div>
       </header> 
+      
 
       <section class="slider">
         <div class="slider-controls">
-          <label for="product-1">Первый</label>
-          <label for="product-2">Второй</label>
-          <label for="product-3">Третий</label>
+          <label class="product-1" for="product-1" tabindex="0">Первый</label>
+          <label class="product-2" for="product-2" tabindex="0">Второй</label>
+          <label class="product-3" for="product-3" tabindex="0">Третий</label>
         </div>
         <ul class="slider-list">
           <li class="slider-item slide" id="slide1">
@@ -126,62 +131,59 @@
       <section class="hits">
         <h2 class="visually-hidden">Список мороженного</h2>
         <ul class="catalog-list">
-          <li class="catalog-item">
-            <div class="catalog-item-wrapper">
-              <a class="catalog-item-image" href="catalog-item.html">
-                <img src="img/product-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-              </a>
-              <b class="catalog-item-price">310 ₽<span class="kilo">/кг</span></b>
-              <h3><a class="catalog-item-title" href="catalog-item.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
-              <a class="btn quick-review" href="#">Быстрый просмотр</a>
-            </div>
+          <li class="catalog-item catalog-item-hit">
+            <a class="catalog-item-image" href="catalog-item.html">
+              <img src="img/product-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+            </a>
+            <b class="catalog-item-price">310 ₽<span class="kilo">/кг</span></b>
+            <h3><a class="catalog-item-title" href="catalog-item.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
+            <a class="btn quick-review" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item catalog-item-hit">
-            <div class="catalog-item-wrapper">
-              <a class="catalog-item-image" href="catalog-item.html">
-                <img src="img/product-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
-              </a>
-              <b class="catalog-item-price">380 ₽<span class="kilo">/кг</span></b>
-              <h3><a class="catalog-item-title" href="catalog-item.html">Сливочно-кофейное с кусочками шоколада</a></h3>
-              <a class="btn quick-review" href="#">Быстрый просмотр</a>
-            </div>
+            <a class="catalog-item-image" href="catalog-item.html">
+              <img src="img/product-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+            </a>
+            <b class="catalog-item-price">380 ₽<span class="kilo">/кг</span></b>
+            <h3><a class="catalog-item-title" href="catalog-item.html">Сливочно-кофейное с кусочками шоколада</a></h3>
+            <a class="btn quick-review" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item catalog-item-hit">
-            <div class="catalog-item-wrapper">
-              <a class="catalog-item-image" href="catalog-item.html">
-                <img src="img/product-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-              </a>
-              <b class="catalog-item-price">355 ₽<span class="kilo">/кг</span></b>
-              <h3><a class="catalog-item-title" href="catalog-item.html">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
-              <a class="btn quick-review" href="#">Быстрый просмотр</a>
-            </div>
+            <a class="catalog-item-image" href="catalog-item.html">
+              <img src="img/product-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+            </a>
+            <b class="catalog-item-price">355 ₽<span class="kilo">/кг</span></b>
+            <h3><a class="catalog-item-title" href="catalog-item.html">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
+            <a class="btn quick-review" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item catalog-item-hit">
-            <div class="catalog-item-wrapper">
-              <a class="catalog-item-image" href="catalog-item.html">
-                <img src="img/product-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
-              </a>
-              <b class="catalog-item-price">415 ₽<span class="kilo">/кг</span></b>
-              <h3><a class="catalog-item-title" href="catalog-item.html">Сливочное крем-брюле с карамельной подливкой</a></h3>
-              <a class="btn quick-review" href="#">Быстрый просмотр</a>
-            </div>
+            <a class="catalog-item-image" href="catalog-item.html">
+              <img src="img/product-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+            </a>
+            <b class="catalog-item-price">415 ₽<span class="kilo">/кг</span></b>
+            <h3><a class="catalog-item-title" href="catalog-item.html">Сливочное крем-брюле с карамельной подливкой</a></h3>
+            <a class="btn quick-review" href="#">Быстрый просмотр</a>
           </li>
         </ul>
       </section>
       <section class="features">
         <h2>Магазин Глэйси — это онлайн- и офлайн-магазин по продажемороженого собственного производства на развес</h2>
         <ul class="features-list">
-          <li class="features-item features-item-left">
-            <p class="feature-icon-icecream">Все наше мороженое изготавливается на собственном производстве, 
-            с использованием современного оборудования и проверенных временем технологий.</p>
-            <p class="feature-icon-leaf">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества.
-            Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
+          <li class="features-item feature-icon-icecream">
+            Все наше мороженое изготавливается на собственном производстве, 
+            с использованием современного оборудования и проверенных временем технологий.    
           </li>
-          <li class="features-item features-item-right">
-            <p class="feature-icon-cow">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний,
-            с которыми нас связывает долговременное сотрудничество.</p>
-            <p class="feature-icon-thermometer">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке,
-            который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+          <li class="features-item feature-icon-cow">
+            Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний,
+            с которыми нас связывает долговременное сотрудничество.
+            
+          </li>
+          <li class="features-item feature-icon-leaf">
+            Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества.
+            Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
+          </li>
+          <li class="features-item feature-icon-thermometer">
+            Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке,
+            который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
           </li>
         </ul>
       </section>
@@ -191,43 +193,42 @@
           <a class="blog-item" href="#">10 способов сервировки фруктовых щербетов к столу</a>
         </section>
         <section class="appointment">
-          <div class="appointment-wrapp">
-            <h3 class="visually-hidden">Подписатся</h3>
-            <p class="subscribe">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного,
-              что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-            <form class="subscribe-form"  action="https://echo.htmlacademy.ru" method="post">
-              <label class="visually-hidden" for="subscribe-email">Электронная почта</label>
-              <input id="subscribe-email" type="text" name="subscribe-email" placeholder="Электронная почта">
-              <button class="btn btn-send-subscribe" type="submit">Отправить</button>
-            </form>
-          </div>
+          <h3 class="visually-hidden">Подписатся</h3>
+          <p class="subscribe">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного,
+            что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+          <form class="subscribe-form"  action="https://echo.htmlacademy.ru" method="post">
+            <label class="visually-hidden" for="subscribe-email">Электронная почта</label>
+            <input id="subscribe-email" type="text" name="subscribe-email" placeholder="Электронная почта">
+            <button class="btn btn-send-subscribe" type="submit">Отправить</button>
+          </form>
         </section>
       </div>
     </main>
     
-    <section class="map-contacnts map-contacnts-icon">
+    <section class="map-contacts map-contacts-icon">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5684817230408!2d30.325289725010023!3d59.939302281188084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2ses!4v1545864011292"
          width="1200" height="430" allowfullscreen></iframe>
-        <div class="contacts">
-          <h2 class="visually-hidden">Контакты</h2>
-          <p class="contacts-address">Адрес главного офиса и офлайн-магазина:</p>
-          <span class="contact-bold-address">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
-          <p class="contacts-phone">Для заказов по телефону:</p>
-          <span class="contact-bold-phone">8 812 450-25-25</span>
-          <p class="contacts-hours">(с 10 до 20 ежедневно)</p>
-          <div class="map-button-wrapper">
-            <a class="btn btn-feedback-form" href="feedback-form.html">Форма обратной связи</a>
-          </div>
-        </div>
+        
     </section>
     
     <footer class="main-footer container">
+      <div class="contacts">
+        <h2 class="visually-hidden">Контакты</h2>
+        <p class="contacts-address">Адрес главного офиса и офлайн-магазина:</p>
+        <span class="contact-bold-address">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
+        <p class="contacts-phone">Для заказов по телефону:</p>
+        <span class="contact-bold-phone">8 812 450-25-25</span>
+        <p class="contacts-hours">(с 10 до 20 ежедневно)</p>
+        <div class="map-button-wrapper">
+          <a class="btn btn-feedback-form" href="feedback-form.html">Форма обратной связи</a>
+        </div>
+      </div>
       <div class="footer-social">
         <ul class="social-links">
-          <li><a class="social-btn social-btn-tv" href="https://twitter.com">Твр</a></li>
-          <li><a class="social-btn social-btn-in" href="https://www.instagram.com">Инст</a></li>  
-          <li><a class="social-btn social-btn-fb" href="https://www.facebook.com">Фб</a></li>
-          <li><a class="social-btn social-btn-vk" href="https://vk.com">Вк</a></li>
+          <li><a class="social-btn social-btn-tv" href="https://twitter.com">Твитер</a></li>
+          <li><a class="social-btn social-btn-in" href="https://www.instagram.com">Инстаграм</a></li>  
+          <li><a class="social-btn social-btn-fb" href="https://www.facebook.com">Фейсбук</a></li>
+          <li><a class="social-btn social-btn-vk" href="https://vk.com">Вконтакте</a></li>
         </ul>
       </div>
       <div class="documents">
@@ -264,9 +265,12 @@
         <label class="visually-hidden" for="message">Текст обращения</label>
         <textarea  id="message" name="message"  placeholder="Напишите что-нибудь..."></textarea>
       </p>
-      <button class="btn btn-send" type="submit">Отправить</button>
+      <div class="feedback-btn-wrap">
+        <button class="btn btn-send" type="submit">Отправить</button>
+      </div>
     </form>
   </section>
-  <script src="js/minimize.js"></script>
+  <div class="overlay-hidden"></div>
+  <script src="js/script.js"></script>
 </body>
 </html>

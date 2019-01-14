@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="utf-8">
-    <title>Catalog</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,500i,700&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/minimize.css">
+  <meta charset="utf-8">
+  <title>Catalog</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="inner-page">
+    <div class="container">
   <header class="main-header">
-    <nav class="main-navigation container">
+    <nav class="main-navigation">
       <div class="menu-wrapper">
         <a class="main-logo" href="index.html">
           <img src="img/logo.svg" width="154" height="64" alt="Логотип «Gllacy Shop»">   
@@ -52,13 +53,15 @@
                   <label class="visually-hidden" for="user-password">Пароль</label>
                   <input id="user-password" type="password" name="password" placeholder="Пароль">
                 </p>
-                <p class="login-password-info">
-                  <a class="restore" href="#">Я забыли пароль?</a>
-                </p>
-                <p class="create-account-info">
-                  <a class="create-account" href="#">Новая регистрация</a>
-                </p>
-                <button class="btn btn-submit" type="submit">Войти</button>
+                <div class="login-items-wrapp">
+                  <p class="login-submit">
+                    <button class="btn btn-submit" type="submit">Войти</button>
+                  </p>
+                  <p class="login-password-info">
+                    <a class="info-item" href="#">Я забыли пароль?</a>
+                    <a class="info-item" href="#">Новая регистрация</a>
+                  </p>
+                </div>
               </form>
             </section>
           </li>
@@ -91,13 +94,15 @@
         </ul>
       </div>
     </nav>
-    <div class="schedule container">
+    <div class="schedule ">
       <p class="hours">С 10 до 20, ежедневно</p>
-      <p class="phone">8 812 450-25-25</p>
+      <p class="phone">
+        <a class="phone-number"  href="tel:8-812-450-25-25">8 812 450-25-25</a>
+      </p>
     </div>
   </header> 
       
-  <main class="container">
+  <main>
     <ul class="breadcrumbs">
       <li><a href="index.html">Главная</a></li>
       <li><a href="#">Каталог</a></li>
@@ -109,10 +114,10 @@
         <legend>Сортировка:</legend>
         <div class="sorter-filter">
           <select name="sorter">
-            <option selected value="popular">По популярности</option>
-            <option value="cheap">Сначала недорогие</option>
-            <option value="expensive">Сначала дорогие</option>
-            <option value="fatness">По жирности</option>
+            <option selected value="popular">по популярности</option>
+            <option value="cheap">сначала недорогие</option>
+            <option value="expensive">сначала дорогие</option>
+            <option value="fatness">по жирности</option>
           </select>
         </div>
       </fieldset>
@@ -131,28 +136,28 @@
       <fieldset class="filter-item">
         <legend>Жирность:</legend>
         <div class="fatnesses-wrapper">
-          <input name="fatness" type="radio" value="0" id="zero">
+          <input class="input-radio" name="fatness" type="radio" value="0" id="zero">
           <label for="zero">0%</label>
-          <input name="fatness" type="radio" value="10" id="ten" checked>
+          <input class="input-radio" name="fatness" type="radio" value="10" id="ten" checked>
           <label for="ten">до 10%</label>
-          <input name="fatness" type="radio" value="30" id="thirty">
+          <input class="input-radio" name="fatness" type="radio" value="30" id="thirty">
           <label for="thirty">до 30%</label>
-          <input name="fatness" type="radio" value="more 30" id="more-thirty">
+          <input class="input-radio" name="fatness" type="radio" value="more 30" id="more-thirty">
           <label for="more-thirty">выше 30%</label>
         </div>
       </fieldset>
       <fieldset class="filter-item">
         <legend>Наполнители:</legend>
         <div class="filler-wrapper">
-          <input type="checkbox" value="шоколадные" id="chocolate" checked>
+          <input class="input-checkbox" type="checkbox" value="шоколадные" id="chocolate" checked>
           <label for="chocolate">шоколадные</label>
-          <input type="checkbox" value="сахарные присыпки" id="sugar" checked>
+          <input class="input-checkbox" type="checkbox" value="сахарные присыпки" id="sugar" checked>
           <label for="sugar">сахарные присыпки</label>
-          <input type="checkbox" value="фрукты" id="fruit">
+          <input class="input-checkbox" type="checkbox" value="фрукты" id="fruit">
           <label for="fruit">фрукты</label>
-          <input type="checkbox" value="сиропы" id="syrup">
+          <input class="input-checkbox" type="checkbox" value="сиропы" id="syrup">
           <label for="syrup">сиропы</label>
-          <input type="checkbox" value="джемы" id="jam">
+          <input class="input-checkbox" type="checkbox" value="джемы" id="jam">
           <label for="jam">джемы</label>
         </div>
       </fieldset>
@@ -259,24 +264,24 @@
         </li>
       </ul>
       <ul class="pagination-list">
-        <li class="left-icon">‹</li>
-        <li class="pagination-item pagination-item-current">1</li>
+        <li class="pagination-item-left"><a class="icon-current"></a></li>
+        <li class="pagination-item pagination-item-current"><a>1</a></li>
         <li class="pagination-item"><a href="#">2</a></li>
         <li class="pagination-item"><a href="#">3</a></li>
         <li class="pagination-item"><a href="#">4</a></li>
         <li class="pagination-item"><a href="#">5</a></li>
-        <li class="right-icon">›</li>
+        <li class="pagination-item-right"><a class="icon-active" href="#"></a></li>
       </ul>
     </section>
   </main>
 
-  <footer class="main-footer container">
+  <footer class="main-footer">
     <div class="footer-social">
       <ul class="social-links">
-        <li><a class="social-btn social-btn-tv" href="https://twitter.com">Твр</a></li>
-        <li><a class="social-btn social-btn-in" href="https://www.instagram.com">Инст</a></li>  
-        <li><a class="social-btn social-btn-fb" href="https://www.facebook.com">Фб</a></li>
-        <li><a class="social-btn social-btn-vk" href="https://vk.com">Вк</a></li>
+        <li><a class="social-btn social-btn-tv" href="https://twitter.com">Твитер</a></li>
+        <li><a class="social-btn social-btn-in" href="https://www.instagram.com">Инстаграм</a></li>  
+        <li><a class="social-btn social-btn-fb" href="https://www.facebook.com">Фейсбук</a></li>
+        <li><a class="social-btn social-btn-vk" href="https://vk.com">Вконтакте</a></li>
       </ul>
     </div>
     <div class="documents">
@@ -295,6 +300,7 @@
       <span>Сделано в <a class="link-copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</span>   
     </div>
   </footer>
+  </div>
   <script src="js/minimize.js"></script>
 </body>
 </html>
