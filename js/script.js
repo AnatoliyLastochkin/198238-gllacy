@@ -8,6 +8,7 @@ var feedbackLink = document.querySelector(".btn-feedback-form");
 
 var popup = document.querySelector(".modal-feedback");
 var close = popup.querySelector(".close-popup");
+var overlay = document.querySelector(".overlay-hidden")
 
 var feedbackForm = popup.querySelector("form");
 var btnFeedback = popup.querySelector(".btn-send");
@@ -42,6 +43,9 @@ try {
   feedbackLink.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.add("modal-show");
+    overlay.classList.add("overlay");
+    console.log(overlay);
+
 
     if (storage) {
       nameField.value = storage;
@@ -56,6 +60,9 @@ try {
     popup.classList.remove("modal-show");
     if (popup.classList.contains("modal-error")) {
       popup.classList.remove("modal-error");
+    }
+    if (overlay.classList.contains("overlay")) {
+      overlay.classList.remove("overlay");
     }
   });
 
@@ -76,6 +83,9 @@ try {
       evt.preventDefault();
       if (popup.classList.contains("modal-show")) {
         popup.classList.remove("modal-show");
+      }
+      if (overlay.classList.contains("overlay")) {
+        overlay.classList.remove("overlay");
       }
     }  
   })
