@@ -5,12 +5,12 @@
   <title>Gllacy Shop</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mini_style.css">
 </head>
 <body>
-  <input class="visually-hidden-radio" type="radio" id="product-1" name="toggle" checked>
-  <input class="visually-hidden-radio" type="radio" id="product-2" name="toggle">
-  <input class="visually-hidden-radio" type="radio" id="product-3" name="toggle">
+  <input class="product-1 visually-hidden-radio" type="radio" id="product-1" name="toggle" checked>
+  <input class="product-2 visually-hidden-radio" type="radio" id="product-2" name="toggle">
+  <input class="product-3 visually-hidden-radio" type="radio" id="product-3" name="toggle">
   <div class="site-wrapper">
     <div class="container">
       <header class="main-header">
@@ -206,9 +206,10 @@
     </main>
     
     <section class="map-contacts map-contacts-icon">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5684817230408!2d30.325289725010023!3d59.939302281188084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2ses!4v1545864011292"
-         width="1200" height="430" allowfullscreen></iframe>
-        
+      <h2 class="visually-hidden">Адрес гугл</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5684817230408!2d30.325289725010023!3d59.939302281188084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2ses!4v1545864011292"
+      width="1200" height="430" allowfullscreen>
+      </iframe>
     </section>
     
     <footer class="main-footer container">
@@ -233,13 +234,13 @@
       </div>
       <div class="documents">
         <ul class="documents-info">
-          <li class="item-info suppliers">
+          <li class="item-info">
             <span class="heart-icon">Сердце</span>
             <a href="#">Для поставщиков</a>
           </li>
-          <li class="item-info our-documents"><a href="#">Наши документы</a></li>
-          <li class="item-info manufacture"><a href="#">О производстве</a></li>
-          <li class="item-info eco"><a href="#">Экологические стандарты</a></li>
+          <li class="item-info"><a href="#">Наши документы</a></li>
+          <li class="item-info"><a href="#">О производстве</a></li>
+          <li class="item-info"><a href="#">Экологические стандарты</a></li>
         </ul>
       </div>
       <div class="footer-copyright">
@@ -271,6 +272,6 @@
     </form>
   </section>
   <div class="overlay-hidden"></div>
-  <script src="js/script.js"></script>
+  <script src="js/mini_script.js"></script>
 </body>
 </html>
