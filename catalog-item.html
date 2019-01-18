@@ -5,7 +5,7 @@
   <title>Catalog</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/mini_style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="inner-page">
     <div class="container">
@@ -33,7 +33,7 @@
       <div class="user-navigation-wrapper">
         <ul class="user-navigation">
           <li class="search-link">
-            <a class="search-icon" href="search.html"></a>
+            <a class="search-icon" href="search.html" aria-label="Поиск"></a>
             <div class="search-form-wrapper">
               <form action="https://echo.htmlacademy.ru" method="post">
                 <input type="search" name="sercher" placeholder="Что ищем?">
@@ -136,28 +136,28 @@
       <fieldset class="filter-item">
         <legend>Жирность:</legend>
         <div class="fatnesses-wrapper">
-          <input class="input-radio" name="fatness" type="radio" value="0" id="zero">
+          <input class="visually-hidden input-radio" name="fatness" type="radio" value="0" id="zero">
           <label for="zero">0%</label>
-          <input class="input-radio" name="fatness" type="radio" value="10" id="ten" checked>
+          <input class="visually-hidden input-radio" name="fatness" type="radio" value="10" id="ten" checked>
           <label for="ten">до 10%</label>
-          <input class="input-radio" name="fatness" type="radio" value="30" id="thirty">
+          <input class="visually-hidden input-radio" name="fatness" type="radio" value="30" id="thirty">
           <label for="thirty">до 30%</label>
-          <input class="input-radio" name="fatness" type="radio" value="more 30" id="more-thirty">
+          <input class="visually-hidden input-radio" name="fatness" type="radio" value="more 30" id="more-thirty">
           <label for="more-thirty">выше 30%</label>
         </div>
       </fieldset>
       <fieldset class="filter-item">
         <legend>Наполнители:</legend>
         <div class="filler-wrapper">
-          <input class="input-checkbox" type="checkbox" value="шоколадные" id="chocolate" checked>
+          <input class="visually-hidden input-checkbox" type="checkbox" value="шоколадные" id="chocolate" checked>
           <label for="chocolate">шоколадные</label>
-          <input class="input-checkbox" type="checkbox" value="сахарные присыпки" id="sugar" checked>
+          <input class="visually-hidden input-checkbox" type="checkbox" value="сахарные присыпки" id="sugar" checked>
           <label for="sugar">сахарные присыпки</label>
-          <input class="input-checkbox" type="checkbox" value="фрукты" id="fruit">
+          <input class="visually-hidden input-checkbox" type="checkbox" value="фрукты" id="fruit">
           <label for="fruit">фрукты</label>
-          <input class="input-checkbox" type="checkbox" value="сиропы" id="syrup">
+          <input class="visually-hidden input-checkbox" type="checkbox" value="сиропы" id="syrup">
           <label for="syrup">сиропы</label>
-          <input class="input-checkbox" type="checkbox" value="джемы" id="jam">
+          <input class="visually-hidden input-checkbox" type="checkbox" value="джемы" id="jam">
           <label for="jam">джемы</label>
         </div>
       </fieldset>
@@ -166,6 +166,22 @@
     <section class="catalog">
       <h2 class="visually-hidden">Список мороженного</h2>
       <ul class="catalog-list">
+        <li class="catalog-item">
+          <a class="catalog-item-image" href="catalog-item.html">
+            <img src="img/product-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+          </a>
+          <b class="catalog-item-price">310 ₽<span class="kilo">/кг</span></b>
+          <h3><a class="catalog-item-title" href="catalog-item.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
+          <a class="btn quick-review" href="#">Быстрый просмотр</a>
+        </li>
+        <li class="catalog-item">
+          <a class="catalog-item-image" href="catalog-item.html">
+            <img src="img/product-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+          </a>
+          <b class="catalog-item-price">310 ₽<span class="kilo">/кг</span></b>
+          <h3><a class="catalog-item-title" href="catalog-item.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
+          <a class="btn quick-review" href="#">Быстрый просмотр</a>
+        </li>
         <li class="catalog-item">
           <a class="catalog-item-image" href="catalog-item.html">
             <img src="img/product-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
