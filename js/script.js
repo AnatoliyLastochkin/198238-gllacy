@@ -33,84 +33,83 @@ try {
   isStorageSupport = false;
 }
 
-  loginForm.addEventListener("submit", function (evt) {
-    if (!loginField.value || !passwordField.value) {
-      evt.preventDefault();
-      loginPopup.classList.toggle("modal-error");
-    } 
-  });
-
-  feedbackLink.addEventListener("click", function (evt) {
+loginForm.addEventListener("submit", function (evt) {
+  if (!loginField.value || !passwordField.value) {
     evt.preventDefault();
-    popup.classList.add("modal-show");
-    overlay.classList.add("overlay");
-    console.log(overlay);
+    loginPopup.classList.toggle("modal-error");
+  } 
+});
 
+feedbackLink.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  popup.classList.add("modal-show");
+  overlay.classList.add("overlay");
+  console.log(overlay);
 
-    if (storage) {
-      nameField.value = storage;
-      email.focus();
-    } else {
-      nameField.focus(); 
+  if (storage) {
+    nameField.value = storage;
+    email.focus();
+  } else {
+    nameField.focus(); 
+  }
+});
+
+close.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  popup.classList.remove("modal-show");
+  if (popup.classList.contains("modal-error")) {
+    popup.classList.remove("modal-error");
+  }
+  if (overlay.classList.contains("overlay")) {
+    overlay.classList.remove("overlay");
+  }
+});
+
+feedbackForm.addEventListener("submit", function (evt) {
+  if (!nameField.value || !email.value || !message.value) {
+    evt.preventDefault();
+    console.log("Все поля обязательны для заполнения!");
+    popup.classList.add("modal-error");
+  } else {
+    if (isStorageSupport) {
+      localStorage.setItem("nameField", nameField.value);
     }
-  });
+  }
+});
 
-  close.addEventListener("click", function (evt) {
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
     evt.preventDefault();
-    popup.classList.remove("modal-show");
-    if (popup.classList.contains("modal-error")) {
-      popup.classList.remove("modal-error");
+    if (popup.classList.contains("modal-show")) {
+      popup.classList.remove("modal-show");
     }
     if (overlay.classList.contains("overlay")) {
       overlay.classList.remove("overlay");
     }
-  });
+  }  
+})
 
-  feedbackForm.addEventListener("submit", function (evt) {
-    if (!nameField.value || !email.value || !message.value) {
-      evt.preventDefault();
-      console.log("Все поля обязательны для заполнения!");
-      popup.classList.add("modal-error");
-    } else {
-      if (isStorageSupport) {
-        localStorage.setItem("nameField", nameField.value);
-      }
-    }
-  });
+close.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  popup.classList.remove("modal-show");
+});
 
-  window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {
-      evt.preventDefault();
-      if (popup.classList.contains("modal-show")) {
-        popup.classList.remove("modal-show");
-      }
-      if (overlay.classList.contains("overlay")) {
-        overlay.classList.remove("overlay");
-      }
-    }  
-  })
-
-  close.addEventListener("click", function (evt) {
+feedbackForm.addEventListener("submit", function (evt) {
+  if (!nameField.value || !emailField.value || !messageArea.value) {
     evt.preventDefault();
-    popup.classList.remove("modal-show");
-  });
+    console.log("Все поля обязательны для заполнения!");
+    popup.classList.add("modal-error");
+  } 
+  
+});
 
-  feedbackForm.addEventListener("submit", function (evt) {
-    if (!nameField.value || !emailField.value || !messageArea.value) {
-      evt.preventDefault();
-      console.log("Все поля обязательны для заполнения!");
-      popup.classList.add("modal-error");
-    } 
-    
-  });
-
-  window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {
-      evt.preventDefault();
-      if (popup.classList.contains("modal-show")) {
-        popup.classList.remove("modal-show");
-      }
-    }  
-  })
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    evt.preventDefault();
+    if (popup.classList.contains("modal-show")) {
+      popup.classList.remove("modal-show");
+    }
+  }  
+})
 
   
